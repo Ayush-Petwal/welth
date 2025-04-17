@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({
+  subsets: ["latin"]
+})
 
 export const metadata = {
   title: "Welth",
@@ -18,12 +14,34 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${inter.className}`}
+          cz-shortcut-listen="true"
+          data-new-gr-c-s-check-loaded="14.1232.0"
+          data-gr-ext-installed=""
+        >
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <footer className="bg-blue-50 py-12">
+            <div className="container mx-auto text-center px-4 text-gray-600 ">
+              <p>
+                Made by{" "}
+                <a
+                  href="https://ayushpetwal.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Ayush Petwal
+                </a>
+                .
+              </p>
+            </div>
+          </footer>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
