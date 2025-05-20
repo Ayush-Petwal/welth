@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
 
           <footer className="bg-blue-50 py-12">
             <div className="container mx-auto px-4 text-center text-gray-600">
-               <div >© 2016 - https://welthaifinance.vercel.app - All Rights Reserved.</div>
+               <div >© 2025 - Welth  - All Rights Reserved.</div>
             </div>
           </footer>
         </body>
