@@ -25,18 +25,7 @@ export default function RootLayout({ children }) {
 
           <footer className="bg-blue-50 py-12">
             <div className="container mx-auto px-4 text-center text-gray-600">
-              <p>
-                Made by{" "}
-                <a
-                  href="https://ayushpetwal.tech/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  Ayush Petwal
-                </a>
-                .
-              </p>
+               <div >© 2016 - https://welthaifinance.vercel.app - All Rights Reserved.</div>
             </div>
           </footer>
         </body>
